@@ -1,0 +1,80 @@
+type RoomType{
+    id: ID
+    type: String
+    price: Float
+}
+
+type Room {
+    roomNumber: Int
+    phoneNumber: String
+    roomType: RoomType
+    floor: Int
+    description: String
+}
+
+type Client{
+    id: ID
+    fio: String
+    birthday: String
+    homeAdress: String
+    sex: String
+    phoneNumber: String
+}
+
+type Visit{
+    arrival: String
+    client: Client
+    room: Room
+    departure: String
+}
+
+type Bill{
+    arrival: String
+    client: Client
+    price: Float
+}
+
+
+type Query{
+    getRoomType(id: ID): RoomType
+    getAllRoomTypes: [RoomType]
+
+    getRoom(id: ID): Room
+    getAllRooms: [Room]
+
+    getClient(id: ID): Client
+    getAllClients: [Client]
+
+    getBusyRooms(room: Int): [Visit]
+    getVisit(arrival: String, idClient: ID, room: ID): Visit
+    getAllVisits: [Visit]
+    getClientVisits(id: Int): [Visit]
+
+    getBill(arrival: String, idClient: ID): Bill
+    getAllBills: [Bill]
+    getClientBills(id: Int): [Bill]
+}
+
+type Mutation{
+    addRoomType(type: String, price: String): RoomType
+    updateRoomType(type: String, price: String): RoomType
+
+    addRoom(roomNumber: Int,
+        phoneNumber: Int,
+        roomType: Int
+        floor: Int,
+        description: String): Room
+    updateRoom(roomNumber: Int,
+        phoneNumber: Int,
+        roomType: Int
+        floor: Int,
+        description: String): Room
+
+    addClient(fio: String, birthday: String, homeAdress: String, sex: String, phoneNumber: String): Client
+    updateClient(fio: String, birthday: String, homeAdress: String, sex: String, phoneNumber: String): Client
+
+    addBill: [Bill]
+
+    deleteVisit(arrival: String, client: Int): [Visit]
+    addVisit(arrival: String, client: Int, room: Int, departure: String): Visit
+}
