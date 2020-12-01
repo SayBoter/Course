@@ -24,7 +24,7 @@ public class RoomService {
     private RoomTypeService roomTypeService;
 
     public static final List<String> DESCRIPTIONS = Arrays.asList("Rich room", "Cool room", "Beautiful room");
-    public static final List<Integer> NUMBERS = Arrays.asList(7097911, 7095655, 7098585);
+    public static final List<Integer> NUMBERS = Arrays.asList(7097911, 5485102, 3214562);
     public Logger logger = LoggerFactory.getLogger(RoomService.class);
 
     @Scheduled(initialDelay = 1000, fixedDelay = 8000)

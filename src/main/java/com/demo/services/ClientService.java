@@ -18,8 +18,8 @@ public class ClientService {
     private JdbcTemplate jdbcTemplate;
 
     public Logger logger = LoggerFactory.getLogger(RoomService.class);
-    public static final List<String> FIOS = Arrays.asList("Ivanov I.I.", "Leonov L.L.", "Trofimov K.K.");
-    public static final List<String> NUMBERS = Arrays.asList("6997911", "6995655", "6998585");
+    public static final List<String> FIOS = Arrays.asList("Ivanov I.I.", "Leonov L.L.", "Trofimov K.K.", "Krasilov K.K.", "Nikolaev H.L.", "Klimov K.K.");
+    public static final List<String> NUMBERS = Arrays.asList("6997911", "7451254", "4582545");
     public static final List<String> BIRTHDAYS = Arrays.asList("20.01.1986", "17.11.1969", "02.03.1995", "30.05.1988");
     public static final List<String> ADRESSES = Arrays.asList("Nauki avenue", "Victory avenue", "Sumskaya street");
     public static final List<String> SEX = Arrays.asList("W", "M");
