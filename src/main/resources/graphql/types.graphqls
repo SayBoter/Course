@@ -71,7 +71,8 @@ type Mutation{
         description: String): Room
 
     addClient(fio: String, birthday: String, homeAdress: String, sex: String, phoneNumber: String): Client
-    updateClient(fio: String, birthday: String, homeAdress: String, sex: String, phoneNumber: String): Client
+    updateClient(id: ID, fio: String, birthday: String, homeAdress: String, sex: String, phoneNumber: String): Client
+    deleteClient(id: ID): String
 
     addBill: [Bill]
 

@@ -16,7 +16,11 @@ public class ClientMutationResolver implements GraphQLMutationResolver {
         return clientService.add(fio, birthday, homeAdress, sex, phoneNumber);
     }
 
-    public Client updateClient(String fio, String birthday, String homeAdress, String sex, String phoneNumber) {
-        return clientService.update(fio, birthday, homeAdress, sex, phoneNumber);
+    public Client updateClient(int id, String fio, String birthday, String homeAdress, String sex, String phoneNumber) {
+        return clientService.update(id, fio, birthday, homeAdress, sex, phoneNumber);
+    }
+
+    public String deleteClient(int id) {
+        return clientService.delete(id);
     }
 }

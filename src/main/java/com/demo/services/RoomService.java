@@ -27,17 +27,17 @@ public class RoomService {
     public static final List<Integer> NUMBERS = Arrays.asList(7097911, 5485102, 3214562);
     public Logger logger = LoggerFactory.getLogger(RoomService.class);
 
-    @Scheduled(initialDelay = 1000, fixedDelay = 8000)
-    public void makeRoom() {
-        Random random = new Random();
-        int roomNumber = getAllRooms().get(getAllRooms().size()-1).getRoomNumber() + random.nextInt(25);
-        Room room = add(roomNumber,
-                NUMBERS.get(random.nextInt(NUMBERS.size())),
-                roomTypeService.getAllRoomTypes().get(random.nextInt(roomTypeService.getAllRoomTypes().size())).getId(),
-                random.nextInt(25),
-                DESCRIPTIONS.get(random.nextInt(DESCRIPTIONS.size())));
-        logger.info("We create a room:" + room.toString());
-    }
+//    @Scheduled(initialDelay = 1000, fixedDelay = 8000)
+//    public void makeRoom() {
+//        Random random = new Random();
+//        int roomNumber = getAllRooms().get(getAllRooms().size()-1).getRoomNumber() + random.nextInt(25);
+//        Room room = add(roomNumber,
+//                NUMBERS.get(random.nextInt(NUMBERS.size())),
+//                roomTypeService.getAllRoomTypes().get(random.nextInt(roomTypeService.getAllRoomTypes().size())).getId(),
+//                random.nextInt(25),
+//                DESCRIPTIONS.get(random.nextInt(DESCRIPTIONS.size())));
+//        logger.info("We create a room:" + room.toString());
+//    }
 
     public Room add(int roomNumber, int phoneNumber, int roomType, int floor, String description) {
         jdbcTemplate.update("Insert Into Room(room_number, phone_number, room_type, floor, description) Values(?,?,?,?,?)",
