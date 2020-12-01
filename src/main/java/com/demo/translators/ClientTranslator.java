@@ -1,7 +1,6 @@
 package com.demo.translators;
 
 import com.demo.types.Client;
-import sun.applet.resources.MsgAppletViewer;
 
 import java.util.Date;
 import java.util.Map;

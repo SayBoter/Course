@@ -1,5 +1,8 @@
 package com.demo.types;
 
+import lombok.ToString;
+
+@ToString
 public class Room {
     private int roomNumber;
     private String phoneNumber;
@@ -54,4 +57,5 @@ public class Room {
     public void setDescription(String description) {
         this.description = description;
     }
+
 }

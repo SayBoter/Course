@@ -1,7 +1,8 @@
 package com.demo.types;
 
-import java.util.Date;
+import lombok.ToString;
 
+@ToString
 public class Client {
     private int id;
     private String fio;
